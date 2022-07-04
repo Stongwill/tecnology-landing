@@ -11,20 +11,18 @@ module.exports = {
     main: "./index.js",
   },
   output: {
-    // создание минифированного файла
-    filename: "[name].[contenthash].js", // имя
-    path: path.resolve(__dirname, "dist"), // создание папки
+    filename: "[name].[contenthash].js", 
+    path: path.resolve(__dirname, "dist"), 
     clean: true,
   },
-  devtool: "source-map", //для отображение в инспекте элементов (возможных ошибок)
+  devtool: "source-map", 
   optimization: {
-    //дробление файлов
     splitChunks: {
       chunks: "all",
     },
   },
   devServer: {
-    port: "4200",
+    port: "3000",
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "./index.html" }),
@@ -41,18 +39,6 @@ module.exports = {
         use: [
           mode === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
           "css-loader",
-          // {loader: "postcss-loader",
-          // options: {
-          //     postcssOptions: {
-          //     plugins: [
-          //         [
-          //             "postcss-preset-env",
-          //             {
-          //                 //Option
-          //             }
-          //         ]
-          //     ]}
-          // }},
           "sass-loader",
         ],
       },
