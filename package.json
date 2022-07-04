@@ -1,12 +1,14 @@
 {
   "name": "webpack-two",
   "version": "1.0.0",
-  "description": "",
+  "homepage": "https://Stongwill.github.io/tecnology-landing",
   "main": "index.js",
   "scripts": {
     "dev": "set NODE_ENV=development&&webpack",
     "build": "set NODE_ENV=production&&webpack",
-    "start": "set NODE_ENV=development&&webpack-dev-server --open"
+    "start": "set NODE_ENV=development&&webpack-dev-server --open",
+    "predeploy": "npm run build",
+    "deploy": "gp-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "node-sass": "^7.0.1",
