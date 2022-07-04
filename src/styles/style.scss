@@ -102,6 +102,7 @@ li{
     font-family: 'Proxima Nova Lt';
     font-size: 128px;
     line-height: 156px;
+    margin-top: 0;
     margin-bottom: 9px;
 }
 .header__inner{
@@ -124,7 +125,11 @@ li{
 
 }
 .header__home{
+    padding-top: 58px;
     margin-bottom: 227px;
+    video{
+        width: 581px;
+    }
    }
 .text__content{
     max-width: 495px;
@@ -301,9 +306,7 @@ iframe{
 #technology, #about, #credits, #bank{
     padding-top: 100px;
 }
-#h1{
-    padding-top: 57px;
-}
+
 .technology{
     position: relative;
     margin-bottom: 100px;
