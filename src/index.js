@@ -16,7 +16,7 @@ open.addEventListener('click', (e) => {
     changes();
     popup.appendChild(navigate);
     popup.appendChild(phone);
-    setInterval(function (){
+    setInterval(() => {
         navigate.addEventListener('click', () =>{
             changes();
         })
@@ -30,12 +30,11 @@ let end = +num.dataset.max;
 window.addEventListener('scroll', function numPartners() {
     if(window.pageYOffset > numTop - window.innerHeight / 2) {
         this.removeEventListener('scroll', numPartners);
-        let count = setInterval(function() {
+        let count = setInterval(() => {
             num.textContent = `${++start}+`;
             if(start == end){
             clearInterval(count);
             }
         }, 20);
-
     }
 });
