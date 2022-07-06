@@ -605,6 +605,9 @@ iframe{
   
 }
 @media (max-width: 1000px){
+    br{
+        display: none;
+    }
     .header__fixed, .header__top{
         height: 60px;
     }
