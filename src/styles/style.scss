@@ -1,4 +1,13 @@
 @import "~normalize.css";
+
+$bColor: #000000;
+$gray: #A0A0AA;
+$font-end: 'Proxima Nova Lt';
+
+@mixin flexAIC() {
+    display: flex;
+    align-items: center;
+}
 // * {
 //     outline: 1px solid red;
 //   }
@@ -37,7 +46,7 @@ body{
     font-family: 'Proxima Nova Th';
     font-size: 22px;
     color: #FFFFFF;
-    background: #000;
+    background: $bColor;
     &.noscroll{
         overflow: hidden;
     }
@@ -70,12 +79,11 @@ li{
     width: 100%;
     height: 88px;
     z-index: 1;
-    background: #000000;
+    background: $bColor;
 }
 .header__top{
-    display: flex;
+    @include flexAIC();
     justify-content: space-between;
-    align-items: center;
     height: 88px;
 }
 
@@ -83,15 +91,13 @@ li{
     margin-right: 52px;
 }
 .menu{
-    display: flex;
-    align-items: center;
+    @include flexAIC();
 }
 .menu__list{
-    display: flex;
-    align-items: center;
+    @include flexAIC();
     .menu__list-link{
         font-size: 19px;
-        font-family: 'Proxima Nova Lt';
+        font-family: $font-end;
         list-style: none;
         &+.menu__list-link{
             margin-left: 30px;
@@ -99,16 +105,15 @@ li{
     } 
 }
 .title{
-    font-family: 'Proxima Nova Lt';
+    font-family: $font-end;
     font-size: 128px;
     line-height: 156px;
     margin-top: 0;
     margin-bottom: 9px;
 }
 .header__inner{
-    display: flex;
+    @include flexAIC();
     justify-content: space-between;
-    align-items: center;
     .text{
       margin: 0;
         max-width: 450px;
@@ -137,7 +142,7 @@ li{
     line-height: 135%;
 }
 .title__content{
-    font-family: 'Proxima Nova Lt';
+    font-family: $font-end;
     font-size: 50px;
     line-height: 150%;
     text-align: center;
@@ -158,10 +163,9 @@ iframe{
     height: 591px;
 }
 .about__inner{
-    display: flex;
+    @include flexAIC();
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     .title__content{
         line-height: 110%;
     }
@@ -178,7 +182,7 @@ iframe{
     margin: 50px 0;
 }
 .about__work-num{
-    color: #A0A0AA;
+    color: $gray;
     width: 56px;
     height: 56px;
     margin: 0 auto;
@@ -186,7 +190,7 @@ iframe{
     border-radius: 33px;
     font-size: 30px;
     line-height: 135%;
-    border: 1px solid #A0A0AA;
+    border: 1px solid $gray;
 }
 
 .about__work-citation{
@@ -266,15 +270,14 @@ iframe{
     margin: 0 auto;
 }
 .about__people-card{
-    display: flex;
-    align-items: center;
+    @include flexAIC();
     gap: 0 25px;
     max-width: 510px;
     margin-bottom: 50px;
     .about__people-name{
         margin: 0;
         width: 221px;
-        font-family: 'Proxima Nova Lt';
+        font-family: $font-end;
         font-size: 30px;
         line-height: 110%;
     }
@@ -292,7 +295,7 @@ iframe{
     margin-top: 95px;
     justify-content: space-around;
     .statistic__title{
-        font-family: 'Proxima Nova Lt';
+        font-family: $font-end;
         font-size: 40px;
         line-height: 135%;
         margin: 0;
@@ -328,15 +331,14 @@ iframe{
     }
 }
 .technology__title{
-    font-family: 'Proxima Nova Lt';
+    font-family: $font-end;
     font-size: 40px;
     line-height: 150%;
     margin: 0;
 }
     .technology__list{
-        display: flex;
+        @include flexAIC();
         flex-direction: column;
-        align-items: center;
     }
 .evolution{
     margin-bottom: 50px;
@@ -359,7 +361,7 @@ iframe{
     .text__content{
         margin-top: 0;
         span{
-            color: #A0A0AA;
+            color: $gray;
         }
     }
     .text__content-weight{
@@ -382,9 +384,8 @@ iframe{
       
     }
     .credits__inner{
-        display: flex;
+        @include flexAIC();
         justify-content: center;
-        align-items: center;
         margin-top: 50px;
     }
     .text__content{
@@ -409,9 +410,9 @@ iframe{
         border: none;
         outline: none;
         width: 493px;
-        border-bottom: 0.5px solid #A0A0AA;
+        border-bottom: 0.5px solid $gray;
         background: transparent;
-        color: #A0A0AA;
+        color: $gray;
         font-size: 20px;
         line-height: 135%;
         margin-right: 38px;
@@ -419,17 +420,17 @@ iframe{
     .credits__btn{
         cursor: pointer;
         border: none;
-        color: #000000;
+        color: $bColor;
         background: #FFFFFF;
         border-radius: 5px;
         padding: 12px 41px;
-        font-family: 'Proxima Nova Lt';
+        font-family: $font-end;
         font-size: 18px;
         line-height: 135%;
     }
     .agreement{
         max-width: 693px;
-        color: #A0A0AA;
+        color: $gray;
         font-size: 14px;
         line-height: 135%;
         margin-top: 24px;
@@ -459,8 +460,7 @@ iframe{
         }
     }
     .answer__inner{
-        display: flex;
-        align-items: center;
+        @include flexAIC();
         justify-content: center;
         margin-top: 45px;
     }
@@ -493,8 +493,7 @@ iframe{
 .partners{
     margin-bottom: 100px;
   .partners__list{
-    display: flex;
-    align-items: center;
+    @include flexAIC();
     justify-content: center;
     margin-top: 100px;
   }  
@@ -513,9 +512,8 @@ iframe{
         margin: 50px auto 63px;
     }
     .programm__info{
-        display: flex;
+        @include flexAIC();
         flex-direction: column;
-        align-items: center;
     }
     .programm__img{
         max-width: 395px;
@@ -525,13 +523,12 @@ iframe{
 .questions{
     margin-bottom: 95px;
     .questions__answer{
-       display: flex; 
-       align-items: center;
+       @include flexAIC();
        flex-direction: column;
     }
     .title__content-questions{
         max-width: 771px;
-        font-family: 'Proxima Nova Lt';
+        font-family: $font-end;
         line-height: 135%;
         margin: 50px 0 20px;
     }
@@ -543,7 +540,7 @@ iframe{
     .question__list{
         max-width: 822px;
         &+.question__list{
-            border-top: 0.5px solid #A0A0AA;
+            border-top: 0.5px solid $gray;
         }
     }
 }
@@ -551,15 +548,11 @@ iframe{
 .footer{
     background: rgba(193, 211, 255, 0.07);
     .footer__inner{
-
         display: flex;
         justify-content: space-between;
     }
     .footer__text{
-        
-        margin: 0;
-        margin-top: 72px;
-        margin-bottom: 59px;
+        margin: 72px 0 59px;
         max-width: 487px;
         font-weight: 400;
         font-size: 12px;
@@ -570,24 +563,22 @@ iframe{
     }
 }
 .footer__inner-bottom{
-    display: flex;
-    align-items: center;
+    @include flexAIC();
     justify-content: space-between;
     padding-bottom: 42px;
 }
 .footer__link{
     margin: 0;
-    display: flex;
-    align-items: center;
+    @include flexAIC();
 }
 .footer__item-link{
-    font-family: 'Proxima Nova Lt';
+    font-family: $font-end;
     font-size: 14px;
     line-height: 150%;
-    color: #A0A0AA;
+    color: $gray;
     margin: 0;
     a{
-        color: #A0A0AA;
+        color: $gray;
     }
     &+.footer__item-link{
         margin-left: 55px;
@@ -604,7 +595,7 @@ iframe{
            }
     }
     .footer__inner{
-        align-items: center;
+        @include flexAIC();
         flex-direction: column;
         .footer__text{
             text-align: center;
@@ -640,10 +631,9 @@ iframe{
             left: -100%;
             width: 100%;
             height: 100vh;
-            background: #000000;
+            background: $bColor;
             transition: all .7s;
             overflow: auto;
-          
         }
         .open{
             padding: 0 15px;
@@ -671,8 +661,6 @@ iframe{
                 line-height: 150%; 
             }
         }
-
-
         iframe{
             width: 820px;
             height: 461px;
@@ -731,10 +719,7 @@ iframe{
         top: 433px;
     }
     .footer{
-        .footer__inner-bottom{
-            flex-direction: column;
-        }
-        .footer__link{
+        .footer__inner-bottom, .footer__link{
             flex-direction: column;
         }
         .footer__item-link + .footer__item-link {
@@ -745,7 +730,6 @@ iframe{
             margin-top: 20px;
         }
     }
-
 }
 
 @media (max-width: 700px){
@@ -780,7 +764,6 @@ iframe{
             height: 348px;
         right: -192px;
         left: auto;
-       
     }
     }
 }
@@ -896,9 +879,8 @@ iframe{
         text-align: inherit;
     }
     .statistic__inner {
-        display: flex;
+        @include flexAIC();
         flex-direction: column;
-        align-items: center;
         margin-top: 100px;
         text-align: center;
         .statistic__title{
@@ -1041,10 +1023,10 @@ iframe{
         width: 47px;
     }
     .tochka{
-        width: 54.95px;
+        width: 55px;
     }
    .tincoff{
-        width: 34.8px;
+        width: 35px;
     }
 
     .about__desc .text__content {
